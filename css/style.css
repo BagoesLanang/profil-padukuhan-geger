@@ -1,0 +1,1743 @@
+/* =====================================================
+                GOOGLE FONT & RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F7F5EF;
+    color:#333;
+    line-height:1.7;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:min(90%,1200px);
+    margin:auto;
+}
+
+/* =====================================================
+                    ROOT COLOR
+===================================================== */
+
+:root{
+
+    --primary:#2E7D32;
+    --primary-dark:#1B5E20;
+    --secondary:#E8F5E9;
+
+    --gold:#C8A951;
+
+    --white:#ffffff;
+
+    --text:#333333;
+
+    --bg:#F7F5EF;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+/* =====================================================
+                    BUTTON
+===================================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 34px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    border:2px solid #fff;
+
+}
+
+.btn-outline:hover{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+/* =====================================================
+                    HEADER
+===================================================== */
+
+/* =====================================================
+                    HEADER
+===================================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:linear-gradient(
+        rgba(16,24,19,.70),
+        rgba(16,24,19,.55)
+    );
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    transition:.35s ease;
+
+}
+
+.header.transparent{
+
+    background:rgba(20,20,20,.15);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:none;
+
+}
+
+.header.transparent.scrolled{
+
+    background:#fff;
+
+    backdrop-filter:none;
+
+    -webkit-backdrop-filter:none;   
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:90px;
+
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+}
+
+.logo img{
+
+    width:90px;
+    height:90px;
+
+    object-fit:contain;
+
+    border-radius:0%;
+
+}
+
+.logo__text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    line-height:1.2;
+
+}
+
+.logo__text h2{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:25px;
+
+    font-weight:700;
+
+    margin:0;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.logo__text span{
+
+    margin-top:2px;
+
+    font-size:13px;
+
+    color:rgba(255,255,255,.85);
+
+    transition:.3s;
+
+}
+
+/* =============== MENU ================= */
+
+.nav__menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.nav__link{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav__link:hover{
+
+    color:#A8D08D;
+
+}
+
+.nav__link.active{
+
+    color:var(--gold);
+
+}
+
+.header.transparent .logo__text h2{
+
+    color:#fff;
+
+}
+
+.header.transparent .logo__text span{
+
+    color:rgba(255,255,255,.9);
+
+}
+
+.header.transparent .nav__link{
+
+    color:#fff;
+
+}
+
+.header.transparent .nav__link.active{
+
+    color:var(--gold);
+
+}
+
+.header.transparent .nav__link:hover{
+
+    color:var(--gold);
+
+}
+
+/* ============ SCROLLED ============= */
+.header.scrolled{
+
+    background:#fff;
+
+    backdrop-filter:none;
+
+    -webkit-backdrop-filter:none;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.header.scrolled .logo__text h2{
+
+    color:var(--primary);
+
+}
+
+.header.scrolled .logo__text span{
+
+    color:#666;
+
+}
+
+.header.scrolled .nav__link{
+
+    color:#333;
+
+}
+
+.header.scrolled .nav__link:hover{
+
+    color:var(--primary);
+
+}
+
+.header.scrolled .nav__link.active{
+
+    color:var(--primary);
+
+}
+
+/* =====================================================
+                    HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    background:url("../assets/images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(18,58,31,.65);
+
+}
+
+.hero__container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero__content{
+
+    max-width:720px;
+
+    color:#fff;
+
+}
+
+.hero__subtitle{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(5px);
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+.hero__title{
+
+    font-size:68px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    font-family:'Montserrat',sans-serif;
+
+}
+
+.hero__description{
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+    max-width:650px;
+
+}
+
+.hero__button{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* =====================================================
+                    SECTION
+===================================================== */
+
+section{
+    padding:100px 0;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section__subtitle{
+    display:inline-block;
+    color:var(--primary);
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.section__title{
+    font-size:42px;
+    font-family:'Montserrat',sans-serif;
+    color:var(--text);
+}
+
+/* =====================================================
+                    ABOUT
+===================================================== */
+
+.about{
+    background:#fff;
+}
+
+.about__container{
+     display:grid;
+
+    grid-template-columns:520px 1fr;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.about__image img{
+   width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.about__content p{
+   text-align: justify;
+    text-justify: inter-word;
+    line-height: 2;
+    font-size: 17px;
+    color: #555;
+}
+
+/* =====================================================
+                    POTENSI
+===================================================== */
+
+.potensi-preview{
+    background:var(--secondary);
+}
+
+.potensi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.potensi-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:var(--radius);
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.potensi-card:hover{
+    transform:translateY(-10px);
+}
+
+.potensi-card i{
+    font-size:50px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.potensi-card h3{
+    margin-bottom:15px;
+    font-family:'Montserrat',sans-serif;
+}
+
+.potensi-card p{
+    color:#666;
+}
+
+/* =====================================================
+                    UMKM
+===================================================== */
+
+.umkm-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.umkm-card{
+    background:#fff;
+    overflow:hidden;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.umkm-card:hover{
+    transform:translateY(-10px);
+}
+
+.umkm-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.umkm-card__content{
+    padding:25px;
+}
+
+.umkm-card__content h3{
+    margin-bottom:12px;
+    font-family:'Montserrat',sans-serif;
+}
+
+.umkm-card__content p{
+    color:#666;
+}
+
+/* =====================================================
+                    GALLERY
+===================================================== */
+
+.gallery-preview{
+    background:var(--secondary);
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-grid img{
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* =====================================================
+                    BUTTON SECTION
+===================================================== */
+
+.section-button{
+    margin-top:45px;
+    text-align:center;
+}
+
+/* =====================================================
+                    FOOTER
+===================================================== */
+
+.footer{
+    background:#1f4d27;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer h3{
+    font-family:'Montserrat',sans-serif;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.footer p{
+    max-width:700px;
+    margin:0 auto 20px;
+    color:#ddd;
+}
+
+.footer small{
+    color:#bbb;
+}
+
+/* =====================================================
+                RESPONSIVE TABLET
+===================================================== */
+
+@media(max-width:992px){
+
+    .hero__title{
+        font-size:52px;
+    }
+
+    .about__container{
+        grid-template-columns:1fr;
+    }
+
+    .potensi-grid,
+    .umkm-grid,
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .gallery-page{
+
+     grid-template-columns:repeat(2,1fr);
+
+}
+}
+
+/* =====================================================
+                RESPONSIVE MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav__menu{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero__title{
+        font-size:42px;
+    }
+
+    .hero__button{
+        justify-content:center;
+    }
+
+    .section__title{
+         font-size:50px;
+
+        line-height:1.2;
+
+        margin:15px 0 25px;
+    }
+
+    .potensi-grid,
+    .umkm-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img{
+        height:220px;
+        .page-hero h1{
+    font-size:38px;
+}
+
+.perangkat-grid{
+    grid-template-columns:1fr;
+}
+    }
+    .potensi-item{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+}
+
+.reverse .potensi-item__image,
+
+.reverse .potensi-item__content{
+
+    order:unset;
+
+}
+
+.potensi-item__image img{
+
+    height:280px;
+
+}   
+
+    .umkm-list{
+
+        grid-template-columns:1fr;
+
+}
+    .gallery-page{
+
+        grid-template-columns:1fr;
+
+}
+
+    .gallery-item img{
+
+        height:230px;
+
+}
+    .contact-wrapper{
+
+        grid-template-columns:1fr;
+
+}
+}
+    /* =====================================================
+                    PAGE HERO
+===================================================== */
+
+.page-hero{
+
+    margin-top:80px;
+
+    padding:120px 0 90px;
+
+    background:linear-gradient(rgba(30,90,50,.75),rgba(30,90,50,.75)),
+    url("../assets/images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.page-hero h1{
+
+    font-size:52px;
+
+    font-family:'Montserrat',sans-serif;
+
+    margin-bottom:20px;
+
+}
+
+.page-hero p{
+
+    font-size:18px;
+
+    max-width:700px;
+
+    margin:auto;
+
+    opacity:.95;
+
+}
+
+/* =====================================================
+                PERANGKAT PADUKUHAN
+===================================================== */
+
+.perangkat{
+
+    background:#fff;
+
+}
+
+.perangkat-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.perangkat-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.perangkat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.perangkat-card img{
+
+    width:100%;
+
+    height:270px;
+
+    object-fit:cover;
+
+}
+
+.perangkat-content{
+
+    padding:22px;
+
+}
+
+.perangkat-content h3{
+
+    font-family:'Montserrat',sans-serif;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+.perangkat-content p{
+
+    margin-bottom:8px;
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+                    LOKASI
+===================================================== */
+
+.lokasi{
+
+    background:var(--secondary);
+
+}
+
+.map-container{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+    /* =====================================================
+                    POTENSI PAGE
+===================================================== */
+
+.potensi-section{
+
+    padding:90px 0;
+
+}
+
+.bg-light{
+
+    background:var(--secondary);
+
+}
+
+.potensi-item{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+.reverse .potensi-item__image{
+
+    order:2;
+
+}
+
+.reverse .potensi-item__content{
+
+    order:1;
+
+}
+
+.potensi-item__image img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.potensi-item__content p{
+
+    margin-top:25px;
+
+    color:#555;
+
+    text-align:justify;
+
+    line-height:1.9;
+
+}
+/* =====================================================
+                    UMKM PAGE
+===================================================== */
+
+.umkm-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.umkm-item{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.umkm-item:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.umkm-item img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.umkm-info{
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.umkm-info h3{
+
+    font-family:'Montserrat',sans-serif;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+.umkm-info p{
+
+    color:#555;
+
+    text-align:left;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:18px;
+
+}
+
+.umkm-contact{
+
+    margin-top:auto;
+
+    margin-bottom:20px;
+
+}
+
+.umkm-contact p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:10px;
+
+    color:#444;
+
+}
+
+.umkm-contact i{
+
+    color:var(--primary);
+
+    width:18px;
+
+}
+
+.umkm-info .btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+/* =====================================================
+                    GALERI PAGE
+===================================================== */
+
+.gallery-page{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+/* =====================================================
+                    KONTAK PAGE
+===================================================== */
+
+.contact-wrapper{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:start;
+
+}
+
+.contact-card{
+
+    display:flex;
+    gap:20px;
+    margin-bottom:30px;
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+
+}
+
+.contact-card i{
+
+    font-size:24px;
+    color:var(--primary);
+    margin-top:5px;
+
+}
+
+.contact-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.contact-form{
+
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+
+}
+
+.contact-form form{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-family:'Poppins',sans-serif;
+    outline:none;
+
+}
+
+.contact-form textarea{
+
+    resize:vertical;
+
+}
+
+.contact-form .btn{
+
+    border:none;
+    cursor:pointer;
+
+}
+/* =====================================================
+                SCROLL TO TOP
+===================================================== */
+
+#scrollTopBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+#scrollTopBtn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#scrollTopBtn:hover{
+
+    transform:translateY(-5px);
+
+}
+/* =====================================================
+                    LIGHTBOX
+===================================================== */
+
+.lightbox{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.9);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+.lightbox.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox-img{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    color:#fff;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+/* =====================================================
+                DETAIL UMKM
+===================================================== */
+
+.umkm-detail{
+
+    padding:100px 0;
+
+}
+
+.detail-wrapper{
+
+    display:grid;
+
+    grid-template-columns:480px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.detail-image img{
+
+    width:100%;
+
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.detail-content h2{
+
+    font-size:48px;
+
+    margin:12px 0 20px;
+
+    color:var(--dark);
+
+}
+
+.detail-content>p{
+
+    line-height:2;
+
+    color:#555;
+
+    margin-bottom:35px;
+
+    text-align:left;
+
+}
+
+.detail-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.detail-info>div{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    background:#fff;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.detail-info i{
+
+    font-size:24px;
+
+    color:var(--primary);
+
+    margin-top:5px;
+
+}
+
+.detail-info h4{
+
+    margin-bottom:8px;
+
+    font-size:17px;
+
+    color:var(--dark);
+
+}
+
+.detail-info p{
+
+    margin:0;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+.detail-button{
+
+    margin-top:20px;
+
+}
+
+
+/* =====================================================
+                    PRODUK
+===================================================== */
+
+.produk-section{
+
+    padding:100px 0;
+
+    background:#f7faf7;
+
+}
+
+.produk-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.produk-single{
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.produk-single .produk-card{
+
+    max-width:520px;
+    width:100%;
+
+}
+
+.produk-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.produk-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.produk-card i{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.produk-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.produk-card p{
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+
+/* =====================================================
+                    GALERI
+===================================================== */
+
+.galeri-section{
+
+    padding:100px 0;
+
+}
+
+.galeri-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.galeri-grid img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.galeri-grid img:hover{
+
+    transform:scale(1.04);
+
+}
+
+
+/* =====================================================
+                    LOKASI
+===================================================== */
+
+.lokasi-section{
+
+    padding:100px 0;
+
+    background:#f7faf7;
+
+}
+
+.lokasi-box{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    line-height:2;
+
+    color:#555;
+
+}
+
+.lokasi-box i{
+
+    color:var(--primary);
+
+    margin-right:10px;
+
+}
+
+.back-button{
+
+    margin-top:45px;
+
+}
+
+
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+.detail-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.detail-image img{
+
+    height:400px;
+
+}
+
+.detail-info{
+
+    grid-template-columns:1fr;
+
+}
+
+.galeri-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.detail-content h2{
+
+    font-size:36px;
+
+}
+
+.galeri-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.detail-image img{
+
+    height:300px;
+
+}
+
+}
+
+.produk-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:18px;
+}
+
+.price-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:18px;
+    padding:10px 18px;
+    background:#e8f5e9;
+    color:var(--primary);
+    border-radius:999px;
+    font-weight:600;
+    border:1px solid rgba(46,125,50,.15);
+}
+
+.price-badge i{
+    font-size:15px;
+}
