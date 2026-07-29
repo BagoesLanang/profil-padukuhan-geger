@@ -187,7 +187,7 @@ section{
 
     z-index:999;
 
-    transition:.35s;
+    transition:all .35s ease;
 
     background:rgba(255,255,255,.08);
 
@@ -685,7 +685,10 @@ section{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(20,58,33,.72);
+    background:linear-gradient(
+        rgba(20,58,33,.78),
+        rgba(20,58,33,.78)
+    );
 }
 
 .page-hero .container{
@@ -995,12 +998,12 @@ section{
 
 .umkm-item img{
     width:100%;
-    height:240px;
+    height:220px;
     object-fit:cover;
 }
 
 .umkm-content{
-    padding:28px;
+    padding:24px;
     display:flex;
     flex-direction:column;
     flex:1;
@@ -1008,19 +1011,39 @@ section{
 
 .umkm-content h3{
     font-family:'Montserrat',sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
     color:var(--primary);
-    margin-bottom:14px;
+    margin-bottom:12px;
+    min-height:62px;
 }
 
 .umkm-content p{
+    font-size: 15px;;
     color:var(--gray);
-    line-height:1.8;
-    margin-bottom:20px;
+    line-height:1.7;
+    margin-bottom:18px;
     text-align:justify;
+
+      display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
 }
 
 .umkm-content .btn{
     margin-top:auto;
+    padding: 12px 24px
+}
+
+.umkm-contact{
+
+    min-height:78px;
+
+    margin-bottom:20px;
+
 }
 
 /* =====================================================
@@ -1389,13 +1412,17 @@ section{
 }
 
 .logo__text h2{
-    color:var(--primary);
-    font-size:18px;
+     font-family:'Montserrat',sans-serif;
+     font-size:24px;
+     color:var(--primary-dark);
+     transition:.3s;
 }
 
 .logo__text span{
-    color:#666;
-    font-size:11px;
+    font-size:13px;
+    color:var(--primary-dark);
+    opacity:.8;
+    transition:.3s;
 }
 
 /* ---------- HAMBURGER ---------- */
@@ -1496,21 +1523,10 @@ section{
 
 .nav__link{
 
-    color:#333;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    width:100%;
-
-    padding:15px 18px;
-
-    border-radius:14px;
-
-    font-size:15px;
+  color:var(--primary-dark);
+    font-weight:600;
+    position:relative;
+    transition:.3s;
 
 }
 
@@ -1753,3 +1769,123 @@ section{
 }
 
 }
+
+/* =========================================
+   INNER PAGE HEADER
+========================================= */
+
+.header.inner-page{
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.header.inner-page .logo__text h2{
+    color: var(--primary-dark);
+}
+
+.header.inner-page .logo__text span{
+    color: var(--primary-dark);
+    opacity: .8;
+}
+
+.header.inner-page .nav__link{
+    color: var(--primary-dark);
+}
+
+.header.inner-page .nav__link:hover{
+    color: var(--primary);
+}
+
+.header.inner-page .nav__link.active{
+    color: var(--gold);
+}
+
+/* ================= GALERI PAGE ================= */
+
+.gallery-page{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:24px;
+
+    margin-top:50px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.gallery-item:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+@media(max-width:768px){
+
+.gallery-page{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.gallery-item img{
+
+    height:180px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.gallery-page{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery-item img{
+
+    height:220px;
+
+}
+
+}
+
