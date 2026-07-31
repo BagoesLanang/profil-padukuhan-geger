@@ -1977,3 +1977,216 @@ section{
 
 }
 
+/* ===========================
+   UMKM PAGE HEADER
+=========================== */
+
+body.umkm-page .header{
+
+    background: transparent;
+
+    box-shadow: none;
+
+    transition: .35s;
+
+}
+
+body.umkm-page .logo__text h2{
+
+    color:var(--primary);
+
+}
+
+body.umkm-page .logo__text span{
+
+    color:#666;
+
+}
+
+body.umkm-page .nav__link{
+
+    color:#333;
+
+}
+
+body.umkm-page .nav__link:hover{
+
+    color:var(--primary);
+
+}
+
+body.umkm-page .nav__link.active{
+
+    color:#d8a93a;
+
+}
+
+/* ===================================================
+   UMKM PAGE V2
+=================================================== */
+
+.umkm-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:32px;
+
+    margin-top:50px;
+
+}
+
+.umkm-item{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.umkm-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.umkm-item img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.umkm-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    padding:24px;
+
+}
+
+.umkm-info h3{
+
+    font-size:1.45rem;
+
+    margin-bottom:14px;
+
+    color:var(--dark);
+
+    line-height:1.3;
+
+}
+
+.umkm-info>p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    flex:1;
+
+}
+
+.umkm-contact{
+
+    margin-bottom:22px;
+
+}
+
+.umkm-contact p{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    margin-bottom:10px;
+
+    font-size:.95rem;
+
+    line-height:1.6;
+
+    color:#555;
+
+}
+
+.umkm-contact i{
+
+    color:var(--primary);
+
+    width:18px;
+
+    margin-top:3px;
+
+}
+
+.umkm-item .btn{
+
+    margin-top:auto;
+
+    width:100%;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    padding:14px;
+
+}
+
+@media(max-width:768px){
+
+.umkm-list{
+
+    grid-template-columns:1fr;
+
+    gap:24px;
+
+}
+
+.umkm-item img{
+
+    height:220px;
+
+}
+
+.umkm-info{
+
+    padding:20px;
+
+}
+
+.umkm-info h3{
+
+    font-size:1.25rem;
+
+}
+
+}
